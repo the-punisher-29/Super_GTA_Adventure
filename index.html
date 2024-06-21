@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="FinalGameStyle.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        #startarea {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        table {
+            margin: 0 auto;
+        }
+
+        button,
+        input[type="text"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+        input[type="text"] {
+            border: 2px solid #ccc;
+        }
+    </style>
+</head>
+
+<body onkeydown="moveGamePiece(event)" onkeyup="resetMovement(event)">
+    <script src="JetpackGameJS.js"></script>
+    <div id="startarea">
+        <h1 style="font-weight: bold; margin-bottom: 30px;">Welcome!</h1> <button onclick="startJetpackGame()"
+            id="start" disabled="true" style="margin-bottom: 30px;">Start Game</button>
+        <h3 style="font-weight: bold; margin-bottom: 20px;">Below are the following characters you can play with:</h3>
+        <table style="margin-bottom: 30px;">
+            <tr style="font-weight: bold;">
+                <td style="padding: 10px;">TrevorGTA(1)</td>
+                <td style="padding: 10px;">MichealGTA(2)</td>
+                <td style="padding: 10px;">FranklinGTA(3)</td>
+                <td style="padding: 10px;">NoobSkinFortnite(4)</td>
+                <td style="padding: 10px;">BananaSkinFortnite(5)</td>
+            </tr>
+            <tr>
+                <td><img height=100px width=100px src="Images/Character1T.png"></td>
+                <td><img height=100px width=100px src="Images/Character1M.png"></td>
+                <td><img height=100px width=100px src="Images/Character1F.png"></td>
+                <td><img height=100px width=100px src="Images/Character1Noob.png"></td>
+                <td><img height=100px width=100px src="Images/Character1Banana.png"></td>
+            </tr>
+            <tr>
+                <td><img height=100px width=100px src="Images/Character1TFlying.png"></td>
+                <td><img height=100px width=100px src="Images/Character1MFlying.png"></td>
+                <td><img height=100px width=100px src="Images/Character1FFlying.png"></td>
+                <td><img height=100px width=100px src="Images/Character1NoobFlying.png"></td>
+                <td><img height=100px width=100px src="Images/Character1BananaFlying.png"></td>
+            </tr>
+        </table>
+    </div> <br><br> <input type="text" id="characterdecision" placeholder="1, 2, 3, 4, or 5"> <button
+        onclick="choseCharacter()" id="charactersubmit">Submit</button>
+    <p id="characterchosen"></p>
+    </div>
+</body>
+</html>
